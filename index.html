@@ -1,4 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMERALD v0.01</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+        .emerald-text {
+            position: fixed;           /* Changed to fixed */
+            top: 0px;
+            left: 20px;
+            font-size: 25px;
+            letter-spacing: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #cccccc00;
+            z-index: 0;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        /* Main text with fatter animated scanlines */
+        .emerald-text {
+            background: linear-gradient(
+                45deg,
+                #006eff 0%,
+                #0084ff 35%,
+                #00ffaa 50%,
+                #ff0000 70%,
+                #4c00ff 90%,
+                #006eff 100%
+            );
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: text-scan 9s linear infinite;
+        }
+
+        @keyframes text-scan {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 300% 0%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="emerald-text">EMERALD ᵥ₁.₀₁₂</div>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
