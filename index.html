@@ -46,7 +46,7 @@
     </style>
 </head>
 <body>
-    <div class="emerald-text">EMERALD ᵥ₁.₀₁³</div>
+    <div class="emerald-text">EMERALD v 1.01.3_1a</div>
 </body>
 </html>
 
@@ -263,12 +263,12 @@ body::-webkit-scrollbar {
     margin-bottom: 0px;
     margin-top: 0px;
     gap: 0px;                   /* consistent gap */
-    padding: 1px 0;
+    padding: 0px 0;
 }
         .dropdown-label {
             color: #00ff80;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             line-height: auto;
             min-width: 0px;       /* better width */
             flex-shrink: 0;
@@ -278,11 +278,14 @@ body::-webkit-scrollbar {
     color: #00ff95;
     border: none;
     border-radius: 6px;
-    padding: 0px 4px;
-    font-size: 12px;
+    padding: 0px 3px;
+    line-height: 0px;
+    font-size: 11px;
     text-align: left;
     flex: 1;               /* ← this is the most important */
-    min-width: 0;          /* ← allows it to shrink */
+    min-width: 0; 
+    min-height: 12px; 
+    max-height: 12px;          /* ← allows it to shrink */
 }
 
 .dropdown-input::placeholder {
@@ -357,10 +360,10 @@ body::-webkit-scrollbar {
   /* Style for the custom checkbox */
 .custom-checkbox {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #00ffaa;
-  border-radius: 6px;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #00ffaa;
+  border-radius: 67px;
 }
 
   /* Style for the custom checkmark */
@@ -371,7 +374,7 @@ body::-webkit-scrollbar {
   margin-left: 1px;
   width: 6px;
   height: 6px;
-  background-color: #00ffaa55;
+  background-color: #00ffaac2;
   border-radius: 99px;
   opacity: 0;
 }
@@ -742,6 +745,10 @@ body::-webkit-scrollbar {
                         <div class="dropdown-row"><div class="dropdown-label">Blacklisted mobs</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="" placeholder="sep by ," class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Blacklisted mobs will get tracked and NOT ignored use "," to seperate and include the "minecraft:" "something:" depending on your mods</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">Whitelisted players</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="" placeholder="sep by ," class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Whitelisted players will not get tracked and ignored use "," to seperate and include the full username eg. "StupidAH67"</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">Blacklisted players</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="" placeholder="sep by ," class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Blacklisted players will get tracked and NOT ignored use "," to seperate and include the full username eg. "StupidAH67"</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Debug log</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Spit debug info for you</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Auto Dis Portal</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Disable when moving in portals</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Remove ghost hand</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Cant hit through walls</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Debug log</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Spit debug info for you</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Hold the keybind key</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
@@ -756,28 +763,39 @@ body::-webkit-scrollbar {
                         <span>Killaura</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">KILLAURAAAAAAAAAAAA</p></div>
                     </div>
                     <div class="settings-panel">
-                        <div class="dropdown-row"><div class="dropdown-label">Rotations</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                        <div class="dropdown-row"><div class="dropdown-label">Rotation mode</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
                             <div class="dropdown-btn"><span class="selected-text">None</span><span class="arrow">▼</span></div>
                             <div class="dropdown-menu">
                                 <div class="menu-item" data-value="None">None</div>
                                 <div class="menu-item" data-value="Silent">Silent</div>
                                 <div class="menu-item" data-value="Client">Client</div>
+                                <div class="menu-item" data-value="Flick">Flick</div>
+                                <div class="menu-item" data-value="Smart">Smart</div>
+                                <div class="menu-item" data-value="Feet">Feet</div>
+                                <div class="menu-item" data-value="Simple">Simple</div>
+                                <div class="menu-item" data-value="Centre">Centre</div>
                             </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Rotate your player to seem legit</p></div></div>
-                        <div class="dropdown-row"><div class="dropdown-label">Rotation type</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
-                            <div class="dropdown-btn"><span class="selected-text">Normal</span><span class="arrow">▼</span></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Switch mode</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">None</span><span class="arrow">▼</span></div>
                             <div class="dropdown-menu">
-                                <div class="menu-item" data-value="Normal">Normal</div>
-                                <div class="menu-item" data-value="Predict">Predict</div>
-                                <div class="menu-item" data-value="Average">Average</div>
-                                <div class="menu-item" data-value="Marlow gooner">Marlow gooner</div>
-                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Rotation type for idk you</p></div></div>
-                        <div class="dropdown-row"><div class="dropdown-label">Hit Type</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
-                            <div class="dropdown-btn"><span class="selected-text">Multi</span><span class="arrow">▼</span></div>
+                                <div class="menu-item" data-value="None">None</div>
+                                <div class="menu-item" data-value="Full">Full</div>
+                                <div class="menu-item" data-value="Spoof">Spoof</div>
+                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Type of switch</p></div></div>
+<div class="dropdown-row"><div class="dropdown-label">Click mode</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">Synced</span><span class="arrow">▼</span></div>
                             <div class="dropdown-menu">
-                                <div class="menu-item" data-value="Multi">Multi</div>
-                                <div class="menu-item" data-value="Single">Single</div>
-                                <div class="menu-item" data-value="Switch">Switch</div>
-                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Rotation type for idk you</p></div></div>
+                                <div class="menu-item" data-value="Synced">Synced</div>
+                                <div class="menu-item" data-value="Earliest">Earliest</div>
+                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Type of click hit</p></div></div>
+<div class="dropdown-row"><div class="dropdown-label">Bypass mode</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">None</span><span class="arrow">▼</span></div>
+                            <div class="dropdown-menu">
+                                <div class="menu-item" data-value="None">None</div>
+                                <div class="menu-item" data-value="FlareonV2">FlareonV2</div>
+                                <div class="menu-item" data-value="Raycast">Raycast</div>
+                                <div class="menu-item" data-value="Divinity">Divinity</div>
+                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Type of bypass</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">Switch Delay</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="2.0" placeholder="Switch delay" class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Delay switching to the next entity</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">Range</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="4.0" placeholder="Range" class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Killaura range</p></div></div>
                         <div class="dropdown-row"><div class="dropdown-label">CPS</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="2.0" placeholder="CPS" class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>How fast the clicking</p></div></div>
@@ -1153,7 +1171,19 @@ body::-webkit-scrollbar {
                             <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
                             <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
                         </div></div></div></div></div>                        
-
+<div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>Fence jump</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">Jump over fences lol</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Hold the keybind key</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div>
                         </div>
 
 <div class="tab-panel overflow-hidden" style="border-radius: 1px; line-height: 20px;">
@@ -2361,6 +2391,58 @@ body::-webkit-scrollbar {
                             <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
                             <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
                         </div></div></div></div></div>
+                                                                        <div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>Frost exploit</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">OP Tricks ur minecraft player to have frost walker</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Level</div><div class="dropdown-label" style="color: #00000000;">.</div><input type="text" value="255" placeholder="-z level" class="dropdown-input"><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Change the level of frost walker</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div> <div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>Anti fire</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">OP</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div> <div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>No anger</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">Removes anger from doing certian things</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Look at enderman</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You can freely look at enderman without angering them</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Hit piglins</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Piglins wont swarm you if you attack them</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div> <div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>FE anything in armour slots</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">Allows to put anything in ur armour slot</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div>
 
                         </div>
 
@@ -2538,8 +2620,1068 @@ body::-webkit-scrollbar {
                         <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
                             <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
                             <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div><div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>Ghost bypass</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">Bypasses ANY ghost blocks/items/ect.. for all modules and ingame using methods</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Method</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">block.tick</span><span class="arrow">▼</span></div>
+                            <div class="dropdown-menu">
+                                <div class="menu-item" data-value="block.tick">block.tick</div>
+                                <div class="menu-item" data-value="block.tick.player">block.tick.player</div>
+                                <div class="menu-item" data-value="place.tick">place.tick</div>
+                                <div class="menu-item" data-value="place.tick.player">place.tick.player</div>
+                                <div class="menu-item" data-value="worldgen.chunk">worldgen.chunk</div>
+                                <div class="menu-item" data-value="blacklist">blacklist</div>
+                                <div class="menu-item" data-value="packet.tick">packet.tick</div>
+                                <div class="menu-item" data-value="drop.tick">drop.tick</div>
+                                <div class="menu-item" data-value="suppresion.tick">suppresion.tick</div>
+                                <div class="menu-item" data-value="portal.tick">portal.tick</div>
+                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Type of corruption</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div><div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>Marketplace utils</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">Unlocks marketplace stuff for free</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">Free templates</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Unlocks stuff for free for templates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Free reasource packs</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Unlocks stuff for free for reasource packs</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Free addons</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Unlocks stuff for free for addons</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Free skins</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Unlocks stuff for free for skins</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Write reviews</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>[BETA] Write reviews on what you buy in the market place (note: the UI can be very buggy cuz its a beta dev feature from official minecraft)</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Free animations</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Unlocks stuff for free for animations</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Free cosmetics</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input" checked><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Unlocks stuff for free for player cosmetics</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
                         </div></div></div></div></div>
-                        </div>
+                    <div class="module-row">
+                    <div class="flex items-center justify-between" 
+                         oncontextmenu="toggleSettings(this.parentElement); return false;" 
+                         onclick="this.parentElement.classList.toggle('active')">
+                        <span>Click GUI</span><div class="dot" id="hoverDot"></div><div class="info-box" id="infoBox"><p style="margin-top: 3px;">The whole UI interface of the ClickGUI</p></div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="dropdown-row"><div class="dropdown-label">ReSkin</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">Emerald (customisable)</span><span class="arrow">▼</span></div>
+                            <div class="dropdown-menu">
+                                <div class="menu-iteM" data-value="Emerald (customisable)">Emerald (customisable)</div>
+                                <div class="menu-iteM" data-value="06dWare">06dWare</div>
+                                <div class="menu-iteM" data-value="3arthh4ck">3arthh4ck</div>
+                                <div class="menu-iteM" data-value="5C">5C</div>
+                                <div class="menu-iteM" data-value="198macros">198macros</div>
+                                <div class="menu-iteM" data-value="303Hack">303Hack</div>
+                                <div class="menu-iteM" data-value="404">404</div>
+                                <div class="menu-iteM" data-value="711.club">711.club</div>
+                                <div class="menu-iteM" data-value="$now">$now</div>
+                                <div class="menu-iteM" data-value="AbHack">AbHack</div>
+                                <div class="menu-iteM" data-value="Abstract">Abstract</div>
+                                <div class="menu-iteM" data-value="Abyss">Abyss</div>
+                                <div class="menu-iteM" data-value="AbyssBeta">AbyssBeta</div>
+                                <div class="menu-iteM" data-value="Achilles">Achilles</div>
+                                <div class="menu-iteM" data-value="Acid">Acid</div>
+                                <div class="menu-iteM" data-value="AClient">AClient</div>
+                                <div class="menu-iteM" data-value="Adequacy">Adequacy</div>
+                                <div class="menu-iteM" data-value="Adopted">Adopted</div>
+                                <div class="menu-iteM" data-value="Aeolus">Aeolus</div>
+                                <div class="menu-iteM" data-value="Aetheris">Aetheris</div>
+                                <div class="menu-iteM" data-value="Agalar">Agalar</div>
+                                <div class="menu-iteM" data-value="AgloHack">AgloHack</div>
+                                <div class="menu-iteM" data-value="AgonyClient">AgonyClient</div>
+                                <div class="menu-iteM" data-value="AidsHack">AidsHack</div>
+                                <div class="menu-iteM" data-value="AimWhere">AimWhere</div>
+                                <div class="menu-iteM" data-value="Alice">Alice</div>
+                                <div class="menu-iteM" data-value="Alien">Alien</div>
+                                <div class="menu-iteM" data-value="AllahClient">AllahClient</div>
+                                <div class="menu-iteM" data-value="AllahWare">AllahWare</div>
+                                <div class="menu-iteM" data-value="Allusion">Allusion</div>
+                                <div class="menu-iteM" data-value="Alpine">Alpine</div>
+                                <div class="menu-iteM" data-value="AlulaHack">AlulaHack</div>
+                                <div class="menu-iteM" data-value="Ambient">Ambient</div>
+                                <div class="menu-iteM" data-value="Ananta">Ananta</div>
+                                <div class="menu-iteM" data-value="AndyClient">AndyClient</div>
+                                <div class="menu-iteM" data-value="Aoba">Aoba</div>
+                                <div class="menu-iteM" data-value="ApeClient">ApeClient</div>
+                                <div class="menu-iteM" data-value="ApeHax">ApeHax</div>
+                                <div class="menu-iteM" data-value="Apex">Apex</div>
+                                <div class="menu-iteM" data-value="Apollo">Apollo</div>
+                                <div class="menu-iteM" data-value="Apollon">Apollon</div>
+                                <div class="menu-iteM" data-value="Apollon-recode">Apollon-recode</div>
+                                <div class="menu-iteM" data-value="ApollyonClient">ApollyonClient</div>
+                                <div class="menu-iteM" data-value="Aquarius">Aquarius</div>
+                                <div class="menu-iteM" data-value="ArchWare">ArchWare</div>
+                                <div class="menu-iteM" data-value="Arctic">Arctic</div>
+                                <div class="menu-iteM" data-value="Ares">Ares</div>
+                                <div class="menu-iteM" data-value="Ares">Ares</div>
+                                <div class="menu-iteM" data-value="Aresnic">Aresnic</div>
+                                <div class="menu-iteM" data-value="Argon">Argon</div>
+                                <div class="menu-iteM" data-value="Aristois">Aristois</div>
+                                <div class="menu-iteM" data-value="Arsenic">Arsenic</div>
+                                <div class="menu-iteM" data-value="Arsie">Arsie</div>
+                                <div class="menu-iteM" data-value="Artemis">Artemis</div>
+                                <div class="menu-iteM" data-value="Ascendency">Ascendency</div>
+                                <div class="menu-iteM" data-value="Astera">Astera</div>
+                                <div class="menu-iteM" data-value="Asteria.rip">Asteria.rip</div>
+                                <div class="menu-iteM" data-value="Astralis">Astralis</div>
+                                <div class="menu-iteM" data-value="Astro.dev">Astro.dev</div>
+                                <div class="menu-iteM" data-value="Atani">Atani</div>
+                                <div class="menu-iteM" data-value="Atlas">Atlas</div>
+                                <div class="menu-iteM" data-value="Atom">Atom</div>
+                                <div class="menu-iteM" data-value="AtomBeta">AtomBeta</div>
+                                <div class="menu-iteM" data-value="Atomic">Atomic</div>
+                                <div class="menu-iteM" data-value="Atrium">Atrium</div>
+                                <div class="menu-iteM" data-value="Augustus">Augustus</div>
+                                <div class="menu-iteM" data-value="Aura V1">Aura V1</div>
+                                <div class="menu-iteM" data-value="Aura V2">Aura V2</div>
+                                <div class="menu-iteM" data-value="Aura V3">Aura V3</div>
+                                <div class="menu-iteM" data-value="Aura V4">Aura V4</div>
+                                <div class="menu-iteM" data-value="Aura V5">Aura V5</div>
+                                <div class="menu-iteM" data-value="Aura V6">Aura V6</div>
+                                <div class="menu-iteM" data-value="Aurora New">Aurora New</div>
+                                <div class="menu-iteM" data-value="Aurora">Aurora</div>
+                                <div class="menu-iteM" data-value="Axolotl">Axolotl</div>
+                                <div class="menu-iteM" data-value="Axon">Axon</div>
+                                <div class="menu-iteM" data-value="Ayakashi">Ayakashi</div>
+                                <div class="menu-iteM" data-value="Azorius.club">Azorius.club</div>
+                                <div class="menu-iteM" data-value="AzuraX">AzuraX</div>
+                                <div class="menu-iteM" data-value="Azure">Azure</div>
+                                <div class="menu-iteM" data-value="Backdoored">Backdoored</div>
+                                <div class="menu-iteM" data-value="Badlion+">Badlion+</div>
+                                <div class="menu-iteM" data-value="BadlionPlus">BadlionPlus</div>
+                                <div class="menu-iteM" data-value="Badman">Badman</div>
+                                <div class="menu-iteM" data-value="Banan+">Banan+</div>
+                                <div class="menu-iteM" data-value="BananPlus">BananPlus</div>
+                                <div class="menu-iteM" data-value="Bandito.club">Bandito.club</div>
+                                <div class="menu-iteM" data-value="Banzem">Banzem</div>
+                                <div class="menu-iteM" data-value="Bape">Bape</div>
+                                <div class="menu-iteM" data-value="Baritone">Baritone</div>
+                                <div class="menu-iteM" data-value="Bartender">Bartender</div>
+                                <div class="menu-iteM" data-value="BaseBand">BaseBand</div>
+                                <div class="menu-iteM" data-value="Batmod">Batmod</div>
+                                <div class="menu-iteM" data-value="BBCWare">BBCWare</div>
+                                <div class="menu-iteM" data-value="BeefSense">BeefSense</div>
+                                <div class="menu-iteM" data-value="Beer">Beer</div>
+                                <div class="menu-iteM" data-value="BerryBobus">BerryBobus</div>
+                                <div class="menu-iteM" data-value="Beta Borion">Beta Borion</div>
+                                <div class="menu-iteM" data-value="BetaX">BetaX</div>
+                                <div class="menu-iteM" data-value="BigG">BigG</div>
+                                <div class="menu-iteM" data-value="BigRat">BigRat</div>
+                                <div class="menu-iteM" data-value="BlackAndWhite">BlackAndWhite</div>
+                                <div class="menu-iteM" data-value="Blackout">Blackout</div>
+                                <div class="menu-iteM" data-value="BladeCore">BladeCore</div>
+                                <div class="menu-iteM" data-value="Bleach hack">Bleach hack</div>
+                                <div class="menu-iteM" data-value="BleachHack">BleachHack</div>
+                                <div class="menu-iteM" data-value="Blessed">Blessed</div>
+                                <div class="menu-iteM" data-value="BLM">BLM</div>
+                                <div class="menu-iteM" data-value="BloodHack">BloodHack</div>
+                                <div class="menu-iteM" data-value="BloodyClient">BloodyClient</div>
+                                <div class="menu-iteM" data-value="BloomWare">BloomWare</div>
+                                <div class="menu-iteM" data-value="BlueZenith">BlueZenith</div>
+                                <div class="menu-iteM" data-value="Bobr">Bobr</div>
+                                <div class="menu-iteM" data-value="BobrWare">BobrWare</div>
+                                <div class="menu-iteM" data-value="Bonk">Bonk</div>
+                                <div class="menu-iteM" data-value="Boost private">Boost private</div>
+                                <div class="menu-iteM" data-value="Boost">Boost</div>
+                                <div class="menu-iteM" data-value="Bopis.club">Bopis.club</div>
+                                <div class="menu-iteM" data-value="Borion">Borion</div>
+                                <div class="menu-iteM" data-value="BossHack">BossHack</div>
+                                <div class="menu-iteM" data-value="BossWare">BossWare</div>
+                                <div class="menu-iteM" data-value="BoyKisser">BoyKisser</div>
+                                <div class="menu-iteM" data-value="Boze">Boze</div>
+                                <div class="menu-iteM" data-value="BozoWare">BozoWare</div>
+                                <div class="menu-iteM" data-value="Breeze">Breeze</div>
+                                <div class="menu-iteM" data-value="BT Hack">BT Hack</div>
+                                <div class="menu-iteM" data-value="BTHack">BTHack</div>
+                                <div class="menu-iteM" data-value="BubbyClient">BubbyClient</div>
+                                <div class="menu-iteM" data-value="BussinUtilites">BussinUtilites</div>
+                                <div class="menu-iteM" data-value="Byte Utility">Byte Utility</div>
+                                <div class="menu-iteM" data-value="Byte">Byte</div>
+                                <div class="menu-iteM" data-value="C.U.M Fusion">C.U.M Fusion</div>
+                                <div class="menu-iteM" data-value="Caizm">Caizm</div>
+                                <div class="menu-iteM" data-value="CakeClient">CakeClient</div>
+                                <div class="menu-iteM" data-value="Calypso">Calypso</div>
+                                <div class="menu-iteM" data-value="Candy">Candy</div>
+                                <div class="menu-iteM" data-value="Candy++">Candy++</div>
+                                <div class="menu-iteM" data-value="CarnageReborn">CarnageReborn</div>
+                                <div class="menu-iteM" data-value="CarrotHack">CarrotHack</div>
+                                <div class="menu-iteM" data-value="Cascade">Cascade</div>
+                                <div class="menu-iteM" data-value="Catalyst">Catalyst</div>
+                                <div class="menu-iteM" data-value="CatClient">CatClient</div>
+                                <div class="menu-iteM" data-value="CatClient+">CatClient+</div>
+                                <div class="menu-iteM" data-value="CatGirl">CatGirl</div>
+                                <div class="menu-iteM" data-value="Catlean">Catlean</div>
+                                <div class="menu-iteM" data-value="Catmi Rewrite">Catmi Rewrite</div>
+                                <div class="menu-iteM" data-value="Catmi">Catmi</div>
+                                <div class="menu-iteM" data-value="CatsWare">CatsWare</div>
+                                <div class="menu-iteM" data-value="CatUtilities">CatUtilities</div>
+                                <div class="menu-iteM" data-value="CCSHack">CCSHack</div>
+                                <div class="menu-iteM" data-value="Cebulionware.NEXT">Cebulionware.NEXT</div>
+                                <div class="menu-iteM" data-value="Celestial Recode">Celestial Recode</div>
+                                <div class="menu-iteM" data-value="Celestial">Celestial</div>
+                                <div class="menu-iteM" data-value="Central">Central</div>
+                                <div class="menu-iteM" data-value="ChachooxWare">ChachooxWare</div>
+                                <div class="menu-iteM" data-value="Charon.eu">Charon.eu</div>
+                                <div class="menu-iteM" data-value="CheatWare">CheatWare</div>
+                                <div class="menu-iteM" data-value="Cherry">Cherry</div>
+                                <div class="menu-iteM" data-value="ChickenWare">ChickenWare</div>
+                                <div class="menu-iteM" data-value="ChickenWings.cc">ChickenWings.cc</div>
+                                <div class="menu-iteM" data-value="ChipsHack">ChipsHack</div>
+                                <div class="menu-iteM" data-value="ChucKHack">ChucKHack</div>
+                                <div class="menu-iteM" data-value="ChungusWare">ChungusWare</div>
+                                <div class="menu-iteM" data-value="Claudius">Claudius</div>
+                                <div class="menu-iteM" data-value="Click">Click</div>
+                                <div class="menu-iteM" data-value="ClickCrystals">ClickCrystals</div>
+                                <div class="menu-iteM" data-value="Client">Client</div>
+                                <div class="menu-iteM" data-value="CliNet">CliNet</div>
+                                <div class="menu-iteM" data-value="Cloud">Cloud</div>
+                                <div class="menu-iteM" data-value="CND">CND</div>
+                                <div class="menu-iteM" data-value="Cobalt">Cobalt</div>
+                                <div class="menu-iteM" data-value="Coffee">Coffee</div>
+                                <div class="menu-iteM" data-value="CoinsClient">CoinsClient</div>
+                                <div class="menu-iteM" data-value="ColaHack">ColaHack</div>
+                                <div class="menu-iteM" data-value="ConstHack.cc">ConstHack.cc</div>
+                                <div class="menu-iteM" data-value="Cookie">Cookie</div>
+                                <div class="menu-iteM" data-value="CookieClient">CookieClient</div>
+                                <div class="menu-iteM" data-value="Cosmos">Cosmos</div>
+                                <div class="menu-iteM" data-value="CousinWare">CousinWare</div>
+                                <div class="menu-iteM" data-value="Cr33pyWare">Cr33pyWare</div>
+                                <div class="menu-iteM" data-value="Cracked">Cracked</div>
+                                <div class="menu-iteM" data-value="Cranberry">Cranberry</div>
+                                <div class="menu-iteM" data-value="CreeperClient">CreeperClient</div>
+                                <div class="menu-iteM" data-value="Creepy Salhack">Creepy Salhack</div>
+                                <div class="menu-iteM" data-value="Crepe">Crepe</div>
+                                <div class="menu-iteM" data-value="CrispyClient">CrispyClient</div>
+                                <div class="menu-iteM" data-value="CrossSince">CrossSince</div>
+                                <div class="menu-iteM" data-value="CrystalClient">CrystalClient</div>
+                                <div class="menu-iteM" data-value="Cue">Cue</div>
+                                <div class="menu-iteM" data-value="Cupid">Cupid</div>
+                                <div class="menu-iteM" data-value="CurryMod">CurryMod</div>
+                                <div class="menu-iteM" data-value="Cursa">Cursa</div>
+                                <div class="menu-iteM" data-value="Curse">Curse</div>
+                                <div class="menu-iteM" data-value="Cute">Cute</div>
+                                <div class="menu-iteM" data-value="CwHack">CwHack</div>
+                                <div class="menu-iteM" data-value="CXClient">CXClient</div>
+                                <div class="menu-iteM" data-value="Dactyl / Moonlight">Dactyl / Moonlight</div>
+                                <div class="menu-iteM" data-value="Dallas">Dallas</div>
+                                <div class="menu-iteM" data-value="DarkClient">DarkClient</div>
+                                <div class="menu-iteM" data-value="DarkYaw">DarkYaw</div>
+                                <div class="menu-iteM" data-value="DeadCode">DeadCode</div>
+                                <div class="menu-iteM" data-value="DebugHack">DebugHack</div>
+                                <div class="menu-iteM" data-value="DecClient">DecClient</div>
+                                <div class="menu-iteM" data-value="Delta">Delta</div>
+                                <div class="menu-iteM" data-value="Demise">Demise</div>
+                                <div class="menu-iteM" data-value="Demise">Demise</div>
+                                <div class="menu-iteM" data-value="Density">Density</div>
+                                <div class="menu-iteM" data-value="DentClient">DentClient</div>
+                                <div class="menu-iteM" data-value="Destroy Premium">Destroy Premium</div>
+                                <div class="menu-iteM" data-value="DestroySquad">DestroySquad</div>
+                                <div class="menu-iteM" data-value="Devu">Devu</div>
+                                <div class="menu-iteM" data-value="DHMClient">DHMClient</div>
+                                <div class="menu-iteM" data-value="DiabloX">DiabloX</div>
+                                <div class="menu-iteM" data-value="Diagoldze">Diagoldze</div>
+                                <div class="menu-iteM" data-value="Dimasik">Dimasik</div>
+                                <div class="menu-iteM" data-value="Dione">Dione</div>
+                                <div class="menu-iteM" data-value="Distance">Distance</div>
+                                <div class="menu-iteM" data-value="Dog Client">Dog Client</div>
+                                <div class="menu-iteM" data-value="Doki">Doki</div>
+                                <div class="menu-iteM" data-value="Doomsday">Doomsday</div>
+                                <div class="menu-iteM" data-value="Dope">Dope</div>
+                                <div class="menu-iteM" data-value="DoragonClient">DoragonClient</div>
+                                <div class="menu-iteM" data-value="DotGod.cc">DotGod.cc</div>
+                                <div class="menu-iteM" data-value="Dragon">Dragon</div>
+                                <div class="menu-iteM" data-value="Dream">Dream</div>
+                                <div class="menu-iteM" data-value="DrugHack Recode">DrugHack Recode</div>
+                                <div class="menu-iteM" data-value="DrugHack">DrugHack</div>
+                                <div class="menu-iteM" data-value="DulyClient">DulyClient</div>
+                                <div class="menu-iteM" data-value="Duperman">Duperman</div>
+                                <div class="menu-iteM" data-value="Echo">Echo</div>
+                                <div class="menu-iteM" data-value="Eclipse">Eclipse</div>
+                                <div class="menu-iteM" data-value="Editme">Editme</div>
+                                <div class="menu-iteM" data-value="Elementars.com">Elementars.com</div>
+                                <div class="menu-iteM" data-value="Elite">Elite</div>
+                                <div class="menu-iteM" data-value="Elite">Elite</div>
+                                <div class="menu-iteM" data-value="Elypsa">Elypsa</div>
+                                <div class="menu-iteM" data-value="Elysian">Elysian</div>
+                                <div class="menu-iteM" data-value="Enhance">Enhance</div>
+                                <div class="menu-iteM" data-value="Ensamble">Ensamble</div>
+                                <div class="menu-iteM" data-value="Epitaph">Epitaph</div>
+                                <div class="menu-iteM" data-value="Epitaph">Epitaph</div>
+                                <div class="menu-iteM" data-value="Epsilon">Epsilon</div>
+                                <div class="menu-iteM" data-value="Epsilon+">Epsilon+</div>
+                                <div class="menu-iteM" data-value="Erebus">Erebus</div>
+                                <div class="menu-iteM" data-value="EsoHack">EsoHack</div>
+                                <div class="menu-iteM" data-value="Estension">Estension</div>
+                                <div class="menu-iteM" data-value="Europa">Europa</div>
+                                <div class="menu-iteM" data-value="Eutopia">Eutopia</div>
+                                <div class="menu-iteM" data-value="Evangelion">Evangelion</div>
+                                <div class="menu-iteM" data-value="Evaware">Evaware</div>
+                                <div class="menu-iteM" data-value="EvliEye">EvliEye</div>
+                                <div class="menu-iteM" data-value="Evo">Evo</div>
+                                <div class="menu-iteM" data-value="Exception">Exception</div>
+                                <div class="menu-iteM" data-value="Exeter">Exeter</div>
+                                <div class="menu-iteM" data-value="Existent">Existent</div>
+                                <div class="menu-iteM" data-value="ExosWare">ExosWare</div>
+                                <div class="menu-iteM" data-value="Expensive">Expensive</div>
+                                <div class="menu-iteM" data-value="Experium">Experium</div>
+                                <div class="menu-iteM" data-value="Extazyy">Extazyy</div>
+                                <div class="menu-iteM" data-value="ExVision">ExVision</div>
+                                <div class="menu-iteM" data-value="FabricHax">FabricHax</div>
+                                <div class="menu-iteM" data-value="Fabuls">Fabuls</div>
+                                <div class="menu-iteM" data-value="Fadeaway">Fadeaway</div>
+                                <div class="menu-iteM" data-value="Faith">Faith</div>
+                                <div class="menu-iteM" data-value="FallenMod">FallenMod</div>
+                                <div class="menu-iteM" data-value="FamilyFunPack">FamilyFunPack</div>
+                                <div class="menu-iteM" data-value="FartHack.cc">FartHack.cc</div>
+                                <div class="menu-iteM" data-value="FDP">FDP</div>
+                                <div class="menu-iteM" data-value="FDP">FDP</div>
+                                <div class="menu-iteM" data-value="FemHack">FemHack</div>
+                                <div class="menu-iteM" data-value="FencingF+2">FencingF+2</div>
+                                <div class="menu-iteM" data-value="Ferox">Ferox</div>
+                                <div class="menu-iteM" data-value="Ferret">Ferret</div>
+                                <div class="menu-iteM" data-value="FerxaxenMod">FerxaxenMod</div>
+                                <div class="menu-iteM" data-value="Fira">Fira</div>
+                                <div class="menu-iteM" data-value="Fire">Fire</div>
+                                <div class="menu-iteM" data-value="FireWork">FireWork</div>
+                                <div class="menu-iteM" data-value="FishHack">FishHack</div>
+                                <div class="menu-iteM" data-value="FiveGuys">FiveGuys</div>
+                                <div class="menu-iteM" data-value="Fivve Xin">Fivve Xin</div>
+                                <div class="menu-iteM" data-value="Flame X">Flame X</div>
+                                <div class="menu-iteM" data-value="Flarial">Flarial</div>
+                                <div class="menu-iteM" data-value="Flarial-and">Flarial-and</div>
+                                <div class="menu-iteM" data-value="Flawless">Flawless</div>
+                                <div class="menu-iteM" data-value="Floence">Floence</div>
+                                <div class="menu-iteM" data-value="Floppa">Floppa</div>
+                                <div class="menu-iteM" data-value="Fluidity">Fluidity</div>
+                                <div class="menu-iteM" data-value="Flusglas">Flusglas</div>
+                                <div class="menu-iteM" data-value="Flux">Flux</div>
+                                <div class="menu-iteM" data-value="Fluxus">Fluxus</div>
+                                <div class="menu-iteM" data-value="Fog">Fog</div>
+                                <div class="menu-iteM" data-value="ForeverClient">ForeverClient</div>
+                                <div class="menu-iteM" data-value="ForgeHax">ForgeHax</div>
+                                <div class="menu-iteM" data-value="FortniteHook">FortniteHook</div>
+                                <div class="menu-iteM" data-value="FPI">FPI</div>
+                                <div class="menu-iteM" data-value="FPSMaster">FPSMaster</div>
+                                <div class="menu-iteM" data-value="Fractal">Fractal</div>
+                                <div class="menu-iteM" data-value="Francium">Francium</div>
+                                <div class="menu-iteM" data-value="Freemanatee">Freemanatee</div>
+                                <div class="menu-iteM" data-value="French Packet">French Packet</div>
+                                <div class="menu-iteM" data-value="FrogWare">FrogWare</div>
+                                <div class="menu-iteM" data-value="Frost">Frost</div>
+                                <div class="menu-iteM" data-value="FrostBurn">FrostBurn</div>
+                                <div class="menu-iteM" data-value="FuFuClient">FuFuClient</div>
+                                <div class="menu-iteM" data-value="FurryWare">FurryWare</div>
+                                <div class="menu-iteM" data-value="Fusion">Fusion</div>
+                                <div class="menu-iteM" data-value="Future">Future</div>
+                                <div class="menu-iteM" data-value="FutureX">FutureX</div>
+                                <div class="menu-iteM" data-value="Fyra">Fyra</div>
+                                <div class="menu-iteM" data-value="Galacticc">Galacticc</div>
+                                <div class="menu-iteM" data-value="Galactie">Galactie</div>
+                                <div class="menu-iteM" data-value="GameSense">GameSense</div>
+                                <div class="menu-iteM" data-value="Gamesense+">Gamesense+</div>
+                                <div class="menu-iteM" data-value="GameSense++">GameSense++</div>
+                                <div class="menu-iteM" data-value="Gardenia">Gardenia</div>
+                                <div class="menu-iteM" data-value="Garuff">Garuff</div>
+                                <div class="menu-iteM" data-value="GateClient">GateClient</div>
+                                <div class="menu-iteM" data-value="Gavhack">Gavhack</div>
+                                <div class="menu-iteM" data-value="Gavhack+">Gavhack+</div>
+                                <div class="menu-iteM" data-value="GeraldHack">GeraldHack</div>
+                                <div class="menu-iteM" data-value="GhostBleach">GhostBleach</div>
+                                <div class="menu-iteM" data-value="GishCode">GishCode</div>
+                                <div class="menu-iteM" data-value="Glacier">Glacier</div>
+                                <div class="menu-iteM" data-value="Gladiator">Gladiator</div>
+                                <div class="menu-iteM" data-value="GlassClient">GlassClient</div>
+                                <div class="menu-iteM" data-value="Gloom">Gloom</div>
+                                <div class="menu-iteM" data-value="Glorium">Glorium</div>
+                                <div class="menu-iteM" data-value="GlowClient">GlowClient</div>
+                                <div class="menu-iteM" data-value="GlyphClient">GlyphClient</div>
+                                <div class="menu-iteM" data-value="GodClient">GodClient</div>
+                                <div class="menu-iteM" data-value="GoldGrinder">GoldGrinder</div>
+                                <div class="menu-iteM" data-value="GoonWare">GoonWare</div>
+                                <div class="menu-iteM" data-value="Gothaj NextGen">Gothaj NextGen</div>
+                                <div class="menu-iteM" data-value="Gothaj">Gothaj</div>
+                                <div class="menu-iteM" data-value="Gothaj">Gothaj</div>
+                                <div class="menu-iteM" data-value="Grace">Grace</div>
+                                <div class="menu-iteM" data-value="GrandLine">GrandLine</div>
+                                <div class="menu-iteM" data-value="GrassWare.win Rewrite">GrassWare.win Rewrite</div>
+                                <div class="menu-iteM" data-value="GrassWare.win">GrassWare.win</div>
+                                <div class="menu-iteM" data-value="Grim">Grim</div>
+                                <div class="menu-iteM" data-value="Grizzly">Grizzly</div>
+                                <div class="menu-iteM" data-value="Guinness">Guinness</div>
+                                <div class="menu-iteM" data-value="Gullible">Gullible</div>
+                                <div class="menu-iteM" data-value="GumTune">GumTune</div>
+                                <div class="menu-iteM" data-value="HackHack">HackHack</div>
+                                <div class="menu-iteM" data-value="Hakai">Hakai</div>
+                                <div class="menu-iteM" data-value="HalalHack">HalalHack</div>
+                                <div class="menu-iteM" data-value="Hamster">Hamster</div>
+                                <div class="menu-iteM" data-value="Hanabi">Hanabi</div>
+                                <div class="menu-iteM" data-value="HANClient">HANClient</div>
+                                <div class="menu-iteM" data-value="Haru">Haru</div>
+                                <div class="menu-iteM" data-value="Harvest">Harvest</div>
+                                <div class="menu-iteM" data-value="HayBale">HayBale</div>
+                                <div class="menu-iteM" data-value="Hearse">Hearse</div>
+                                <div class="menu-iteM" data-value="HeavenClient">HeavenClient</div>
+                                <div class="menu-iteM" data-value="Helios">Helios</div>
+                                <div class="menu-iteM" data-value="HemHacks">HemHacks</div>
+                                <div class="menu-iteM" data-value="Hephaestus">Hephaestus</div>
+                                <div class="menu-iteM" data-value="Hiassi.su">Hiassi.su</div>
+                                <div class="menu-iteM" data-value="HilariousWare">HilariousWare</div>
+                                <div class="menu-iteM" data-value="HitlerHax">HitlerHax</div>
+                                <div class="menu-iteM" data-value="Hitori">Hitori</div>
+                                <div class="menu-iteM" data-value="Hmxix">Hmxix</div>
+                                <div class="menu-iteM" data-value="HockeyWare">HockeyWare</div>
+                                <div class="menu-iteM" data-value="HOPE">HOPE</div>
+                                <div class="menu-iteM" data-value="Horion">Horion</div>
+                                <div class="menu-iteM" data-value="Horion">Horion</div>
+                                <div class="menu-iteM" data-value="HorionSM">Faith</div>
+                                <div class="menu-iteM" data-value="Houdini.cc">Houdini.cc</div>
+                                <div class="menu-iteM" data-value="HT+ Rewrite">HT+ Rewrite</div>
+                                <div class="menu-iteM" data-value="HuqaloV">HuqaloV</div>
+                                <div class="menu-iteM" data-value="Huzuni">Huzuni</div>
+                                <div class="menu-iteM" data-value="Huzuni+2">Huzuni+2</div>
+                                <div class="menu-iteM" data-value="Hydra">Hydra</div>
+                                <div class="menu-iteM" data-value="HydraWare">HydraWare</div>
+                                <div class="menu-iteM" data-value="HydraWare+">HydraWare+</div>
+                                <div class="menu-iteM" data-value="Hydrogen">Hydrogen</div>
+                                <div class="menu-iteM" data-value="HyghLand.cc">HyghLand.cc</div>
+                                <div class="menu-iteM" data-value="HyperLethal">HyperLethal</div>
+                                <div class="menu-iteM" data-value="Hypnotic">Hypnotic</div>
+                                <div class="menu-iteM" data-value="IceHack">IceHack</div>
+                                <div class="menu-iteM" data-value="Ika">Ika</div>
+                                <div class="menu-iteM" data-value="Ikea">Ikea</div>
+                                <div class="menu-iteM" data-value="ILClient">ILClient</div>
+                                <div class="menu-iteM" data-value="Impact">Impact</div>
+                                <div class="menu-iteM" data-value="Impact">Impact</div>
+                                <div class="menu-iteM" data-value="Impact+">Impact+</div>
+                                <div class="menu-iteM" data-value="ImpHax">ImpHax</div>
+                                <div class="menu-iteM" data-value="Incoming">Incoming</div>
+                                <div class="menu-iteM" data-value="Indium.cc">Indium.cc</div>
+                                <div class="menu-iteM" data-value="Inerta">Inerta</div>
+                                <div class="menu-iteM" data-value="Inertia">Inertia</div>
+                                <div class="menu-iteM" data-value="Inertial">Inertial</div>
+                                <div class="menu-iteM" data-value="Inferno">Inferno</div>
+                                <div class="menu-iteM" data-value="Infinity">Infinity</div>
+                                <div class="menu-iteM" data-value="Infinity">Infinity</div>
+                                <div class="menu-iteM" data-value="InfnityLoop">InfnityLoop</div>
+                                <div class="menu-iteM" data-value="IngrosWare">IngrosWare</div>
+                                <div class="menu-iteM" data-value="Invicta">Invicta</div>
+                                <div class="menu-iteM" data-value="InvincibilityHack">InvincibilityHack</div>
+                                <div class="menu-iteM" data-value="Iris">Iris</div>
+                                <div class="menu-iteM" data-value="ISUWare">ISUWare</div>
+                                <div class="menu-iteM" data-value="iSync">iSync</div>
+                                <div class="menu-iteM" data-value="Itz Yoid">Itz Yoid</div>
+                                <div class="menu-iteM" data-value="Jackey">Jackey</div>
+                                <div class="menu-iteM" data-value="JebHack">JebHack</div>
+                                <div class="menu-iteM" data-value="JesusHack">JesusHack</div>
+                                <div class="menu-iteM" data-value="Jew">Jew</div>
+                                <div class="menu-iteM" data-value="JexClient">JexClient</div>
+                                <div class="menu-iteM" data-value="JigokuSense">JigokuSense</div>
+                                <div class="menu-iteM" data-value="Jigsaw">Jigsaw</div>
+                                <div class="menu-iteM" data-value="JoblessClient">JoblessClient</div>
+                                <div class="menu-iteM" data-value="JorgitoHack">JorgitoHack</div>
+                                <div class="menu-iteM" data-value="JP">JP</div>
+                                <div class="menu-iteM" data-value="JuiceClient">JuiceClient</div>
+                                <div class="menu-iteM" data-value="Juul">Juul</div>
+                                <div class="menu-iteM" data-value="Kami5">Kami5</div>
+                                <div class="menu-iteM" data-value="KAMI Blue">KAMI Blue</div>
+                                <div class="menu-iteM" data-value="KAMI">KAMI</div>
+                                <div class="menu-iteM" data-value="Kami++">Kami++</div>
+                                <div class="menu-iteM" data-value="Kamiblue">Kamiblue</div>
+                                <div class="menu-iteM" data-value="Kamiblue+">Kamiblue+</div>
+                                <div class="menu-iteM" data-value="Kana">Kana</div>
+                                <div class="menu-iteM" data-value="Kaotik">Kaotik</div>
+                                <div class="menu-iteM" data-value="Kappa">Kappa</div>
+                                <div class="menu-iteM" data-value="Kapuncion">Kapuncion</div>
+                                <div class="menu-iteM" data-value="Kawaii">Kawaii</div>
+                                <div class="menu-iteM" data-value="KBPW">KBPW</div>
+                                <div class="menu-iteM" data-value="KeKWClient">KeKWClient</div>
+                                <div class="menu-iteM" data-value="Kemmy.cc">Kemmy.cc</div>
+                                <div class="menu-iteM" data-value="Ket">Ket</div>
+                                <div class="menu-iteM" data-value="Ketamine">Ketamine</div>
+                                <div class="menu-iteM" data-value="KettleHack">KettleHack</div>
+                                <div class="menu-iteM" data-value="KevinClient">KevinClient</div>
+                                <div class="menu-iteM" data-value="Kion">Kion</div>
+                                <div class="menu-iteM" data-value="KiwiClient">KiwiClient</div>
+                                <div class="menu-iteM" data-value="KlaydixWare">KlaydixWare</div>
+                                <div class="menu-iteM" data-value="KnightHack">KnightHack</div>
+                                <div class="menu-iteM" data-value="Kodiak">Kodiak</div>
+                                <div class="menu-iteM" data-value="Koid">Koid</div>
+                                <div class="menu-iteM" data-value="Koks">Koks</div>
+                                <div class="menu-iteM" data-value="Konas">Konas</div>
+                                <div class="menu-iteM" data-value="Konc">Konc</div>
+                                <div class="menu-iteM" data-value="Korppu">Korppu</div>
+                                <div class="menu-iteM" data-value="Krypton">Krypton</div>
+                                <div class="menu-iteM" data-value="Kull">Kull</div>
+                                <div class="menu-iteM" data-value="Kura NextGen">Kura NextGen</div>
+                                <div class="menu-iteM" data-value="Kura">Kura</div>
+                                <div class="menu-iteM" data-value="KuroHack">KuroHack</div>
+                                <div class="menu-iteM" data-value="KVN">KVN</div>
+                                <div class="menu-iteM" data-value="Kyino">Kyino</div>
+                                <div class="menu-iteM" data-value="Lambda">Lambda</div>
+                                <div class="menu-iteM" data-value="Lambda+">Lambda+</div>
+                                <div class="menu-iteM" data-value="LanderClient">LanderClient</div>
+                                <div class="menu-iteM" data-value="Lantern">Lantern</div>
+                                <div class="menu-iteM" data-value="LavaHack">LavaHack</div>
+                                <div class="menu-iteM" data-value="LBounce">LBounce</div>
+                                <div class="menu-iteM" data-value="Leave">Leave</div>
+                                <div class="menu-iteM" data-value="Legacy">Legacy</div>
+                                <div class="menu-iteM" data-value="Lemon">Lemon</div>
+                                <div class="menu-iteM" data-value="Lemonade">Lemonade</div>
+                                <div class="menu-iteM" data-value="Lepton">Lepton</div>
+                                <div class="menu-iteM" data-value="LeuxBackdoor">LeuxBackdoor</div>
+                                <div class="menu-iteM" data-value="Lick.exe">Lick.exe</div>
+                                <div class="menu-iteM" data-value="LifeLine">LifeLine</div>
+                                <div class="menu-iteM" data-value="Lime">Lime</div>
+                                <div class="menu-iteM" data-value="Liquidbounce">Liquidbounce</div>
+                                <div class="menu-iteM" data-value="LiquidBounce">LiquidBounce</div>
+                                <div class="menu-iteM" data-value="LiquidBounce+ Reborn">LiquidBounce+ Reborn</div>
+                                <div class="menu-iteM" data-value="LiquidBounce+">LiquidBounce+</div>
+                                <div class="menu-iteM" data-value="LiquidBounce++">LiquidBounce++</div>
+                                <div class="menu-iteM" data-value="LiquidCat">LiquidCat</div>
+                                <div class="menu-iteM" data-value="Liquido">Liquido</div>
+                                <div class="menu-iteM" data-value="LiquidShadow">LiquidShadow</div>
+                                <div class="menu-iteM" data-value="LiquidX">LiquidX</div>
+                                <div class="menu-iteM" data-value="Lirium">Lirium</div>
+                                <div class="menu-iteM" data-value="ListedHack">ListedHack</div>
+                                <div class="menu-iteM" data-value="Litka">Litka</div>
+                                <div class="menu-iteM" data-value="LiveSense">LiveSense</div>
+                                <div class="menu-iteM" data-value="LmaoBox">LmaoBox</div>
+                                <div class="menu-iteM" data-value="LoseBypass">LoseBypass</div>
+                                <div class="menu-iteM" data-value="Lotus">Lotus</div>
+                                <div class="menu-iteM" data-value="LoustHack">LoustHack</div>
+                                <div class="menu-iteM" data-value="Love">Love</div>
+                                <div class="menu-iteM" data-value="Lover">Lover</div>
+                                <div class="menu-iteM" data-value="Luchadora">Luchadora</div>
+                                <div class="menu-iteM" data-value="LuckyClient">LuckyClient</div>
+                                <div class="menu-iteM" data-value="Luconia">Luconia</div>
+                                <div class="menu-iteM" data-value="LuigiHack">LuigiHack</div>
+                                <div class="menu-iteM" data-value="LumaHack">LumaHack</div>
+                                <div class="menu-iteM" data-value="LumeMinus">LumeMinus</div>
+                                <div class="menu-iteM" data-value="Lumen">Lumen</div>
+                                <div class="menu-iteM" data-value="Lumina Client">Lumina Client</div>
+                                <div class="menu-iteM" data-value="Lumine">Lumine</div>
+                                <div class="menu-iteM" data-value="Luna">Luna</div>
+                                <div class="menu-iteM" data-value="Lunar">Lunar</div>
+                                <div class="menu-iteM" data-value="LuneClient">LuneClient</div>
+                                <div class="menu-iteM" data-value="Luxury V1">Luxury V1</div>
+                                <div class="menu-iteM" data-value="Luxury V2">Luxury V2</div>
+                                <div class="menu-iteM" data-value="Lycoris">Lycoris</div>
+                                <div class="menu-iteM" data-value="Lynx">Lynx</div>
+                                <div class="menu-iteM" data-value="Lyra">Lyra</div>
+                                <div class="menu-iteM" data-value="M3dC3t">M3dC3t</div>
+                                <div class="menu-iteM" data-value="MacHack">MacHack</div>
+                                <div class="menu-iteM" data-value="MachineLite">MachineLite</div>
+                                <div class="menu-iteM" data-value="MackMod">MackMod</div>
+                                <div class="menu-iteM" data-value="MahanWare">MahanWare</div>
+                                <div class="menu-iteM" data-value="Manjaro">Manjaro</div>
+                                <div class="menu-iteM" data-value="MarlowClient">MarlowClient</div>
+                                <div class="menu-iteM" data-value="MasterMind">MasterMind</div>
+                                <div class="menu-iteM" data-value="MatHax">MatHax</div>
+                                <div class="menu-iteM" data-value="Matrix">Matrix</div>
+                                <div class="menu-iteM" data-value="MawouteClient">MawouteClient</div>
+                                <div class="menu-iteM" data-value="MayhemClient">MayhemClient</div>
+                                <div class="menu-iteM" data-value="MaywrWare">MaywrWare</div>
+                                <div class="menu-iteM" data-value="McDonald">McDonald</div>
+                                <div class="menu-iteM" data-value="MClient++">MClient++</div>
+                                <div class="menu-iteM" data-value="MCPClient">MCPClient</div>
+                                <div class="menu-iteM" data-value="MedusaWare">MedusaWare</div>
+                                <div class="menu-iteM" data-value="Medved">Medved</div>
+                                <div class="menu-iteM" data-value="MelodySky">MelodySky</div>
+                                <div class="menu-iteM" data-value="Melon">Melon</div>
+                                <div class="menu-iteM" data-value="MelonHack+">MelonHack+</div>
+                                <div class="menu-iteM" data-value="MemeWare">MemeWare</div>
+                                <div class="menu-iteM" data-value="MeowHack">MeowHack</div>
+                                <div class="menu-iteM" data-value="Mercury Pro">Mercury Pro</div>
+                                <div class="menu-iteM" data-value="Mercury">Mercury</div>
+                                <div class="menu-iteM" data-value="Meteor">Meteor</div>
+                                <div class="menu-iteM" data-value="Meteor">Meteor</div>
+                                <div class="menu-iteM" data-value="Meteor+">Meteor+</div>
+                                <div class="menu-iteM" data-value="MethodClient">MethodClient</div>
+                                <div class="menu-iteM" data-value="MetteroV2">MetteroV2</div>
+                                <div class="menu-iteM" data-value="Miku">Miku</div>
+                                <div class="menu-iteM" data-value="Minced">Minced</div>
+                                <div class="menu-iteM" data-value="Mint">Mint</div>
+                                <div class="menu-iteM" data-value="MinusBounce">MinusBounce</div>
+                                <div class="menu-iteM" data-value="Mio (Free)">Mio (Free)</div>
+                                <div class="menu-iteM" data-value="Mio">Mio</div>
+                                <div class="menu-iteM" data-value="Mirai">Mirai</div>
+                                <div class="menu-iteM" data-value="Misericordia">Misericordia</div>
+                                <div class="menu-iteM" data-value="Moloch.su">Moloch.su</div>
+                                <div class="menu-iteM" data-value="Momentum">Momentum</div>
+                                <div class="menu-iteM" data-value="MoneyMod+2">MoneyMod+2</div>
+                                <div class="menu-iteM" data-value="MoneyMod+3">MoneyMod+3</div>
+                                <div class="menu-iteM" data-value="MonkeClient">MonkeClient</div>
+                                <div class="menu-iteM" data-value="MonkeyClient">MonkeyClient</div>
+                                <div class="menu-iteM" data-value="MonSoon">MonSoon</div>
+                                <div class="menu-iteM" data-value="Moon Ware">Moon Ware</div>
+                                <div class="menu-iteM" data-value="Moon">Moon</div>
+                                <div class="menu-iteM" data-value="MoonGod">MoonGod</div>
+                                <div class="menu-iteM" data-value="Moonlight (Meadows)">Moonlight (Meadows)</div>
+                                <div class="menu-iteM" data-value="Moonlight">Moonlight</div>
+                                <div class="menu-iteM" data-value="Moonlight">Moonlight</div>
+                                <div class="menu-iteM" data-value="MoonWare">MoonWare</div>
+                                <div class="menu-iteM" data-value="Morgen.cc">Morgen.cc</div>
+                                <div class="menu-iteM" data-value="MotClient">MotClient</div>
+                                <div class="menu-iteM" data-value="Mousse">Mousse</div>
+                                <div class="menu-iteM" data-value="Muffin">Muffin</div>
+                                <div class="menu-iteM" data-value="Mushroom">Mushroom</div>
+                                <div class="menu-iteM" data-value="Myau">Myau</div>
+                                <div class="menu-iteM" data-value="MythClient">MythClient</div>
+                                <div class="menu-iteM" data-value="Nadia">Nadia</div>
+                                <div class="menu-iteM" data-value="Nami">Nami</div>
+                                <div class="menu-iteM" data-value="Namida">Namida</div>
+                                <div class="menu-iteM" data-value="NanoSense">NanoSense</div>
+                                <div class="menu-iteM" data-value="Natsuki">Natsuki</div>
+                                <div class="menu-iteM" data-value="Nature">Nature</div>
+                                <div class="menu-iteM" data-value="NClient">NClient</div>
+                                <div class="menu-iteM" data-value="Nebula">Nebula</div>
+                                <div class="menu-iteM" data-value="NEC Premium">NEC Premium</div>
+                                <div class="menu-iteM" data-value="Neko+">Neko+</div>
+                                <div class="menu-iteM" data-value="Neptune">Neptune</div>
+                                <div class="menu-iteM" data-value="Neptunium">Neptunium</div>
+                                <div class="menu-iteM" data-value="Nerdium">Nerdium</div>
+                                <div class="menu-iteM" data-value="Neutron">Neutron</div>
+                                <div class="menu-iteM" data-value="NeverBuy">NeverBuy</div>
+                                <div class="menu-iteM" data-value="Neverdies">Neverdies</div>
+                                <div class="menu-iteM" data-value="NeverHook">NeverHook</div>
+                                <div class="menu-iteM" data-value="Nevoy">Nevoy</div>
+                                <div class="menu-iteM" data-value="NextifyQristo">NextifyQristo</div>
+                                <div class="menu-iteM" data-value="Nexus Edge">Nexus Edge</div>
+                                <div class="menu-iteM" data-value="Nexus">Nexus</div>
+                                <div class="menu-iteM" data-value="Nexus">Nexus</div>
+                                <div class="menu-iteM" data-value="NG">NG</div>
+                                <div class="menu-iteM" data-value="NHack3">NHack3</div>
+                                <div class="menu-iteM" data-value="Nhack4">Nhack4</div>
+                                <div class="menu-iteM" data-value="Nhack">Nhack</div>
+                                <div class="menu-iteM" data-value="Nicotine">Nicotine</div>
+                                <div class="menu-iteM" data-value="Nigga">Nigga</div>
+                                <div class="menu-iteM" data-value="NiggaHack">NiggaHack</div>
+                                <div class="menu-iteM" data-value="Nigger">Nigger</div>
+                                <div class="menu-iteM" data-value="NightClient">NightClient</div>
+                                <div class="menu-iteM" data-value="NightWare+">NightWare+</div>
+                                <div class="menu-iteM" data-value="NightX">NightX</div>
+                                <div class="menu-iteM" data-value="NineHack">NineHack</div>
+                                <div class="menu-iteM" data-value="Nitr0">Nitr0</div>
+                                <div class="menu-iteM" data-value="Noat Wurst+2">Noat Wurst+2</div>
+                                <div class="menu-iteM" data-value="NobleSix">NobleSix</div>
+                                <div class="menu-iteM" data-value="NoobHack">NoobHack</div>
+                                <div class="menu-iteM" data-value="Norsa">Norsa</div>
+                                <div class="menu-iteM" data-value="North">North</div>
+                                <div class="menu-iteM" data-value="Norules">Norules</div>
+                                <div class="menu-iteM" data-value="Not a skid">Not a skid</div>
+                                <div class="menu-iteM" data-value="Notorious">Notorious</div>
+                                <div class="menu-iteM" data-value="Nova">Nova</div>
+                                <div class="menu-iteM" data-value="November">November</div>
+                                <div class="menu-iteM" data-value="Novoline">Novoline</div>
+                                <div class="menu-iteM" data-value="Nuke V1">Nuke V1</div>
+                                <div class="menu-iteM" data-value="Nuke V2">Nuke V2</div>
+                                <div class="menu-iteM" data-value="Nuke V3">Nuke V3</div>
+                                <div class="menu-iteM" data-value="Nuke V4">Nuke V4</div>
+                                <div class="menu-iteM" data-value="Nuke V5">Nuke V5</div>
+                                <div class="menu-iteM" data-value="Nuke V6">Nuke V6</div>
+                                <div class="menu-iteM" data-value="Nuke V7">Nuke V7</div>
+                                <div class="menu-iteM" data-value="NullHack">NullHack</div>
+                                <div class="menu-iteM" data-value="NullPoint">NullPoint</div>
+                                <div class="menu-iteM" data-value="Nursultan">Nursultan</div>
+                                <div class="menu-iteM" data-value="NutGod.CC">NutGod.CC</div>
+                                <div class="menu-iteM" data-value="NyaHack">NyaHack</div>
+                                <div class="menu-iteM" data-value="OakClient">OakClient</div>
+                                <div class="menu-iteM" data-value="Oasis">Oasis</div>
+                                <div class="menu-iteM" data-value="ObamaHack">ObamaHack</div>
+                                <div class="menu-iteM" data-value="Oblivion">Oblivion</div>
+                                <div class="menu-iteM" data-value="OctoHack">OctoHack</div>
+                                <div class="menu-iteM" data-value="OderSo">OderSo</div>
+                                <div class="menu-iteM" data-value="OffenseWare">OffenseWare</div>
+                                <div class="menu-iteM" data-value="Omega">Omega</div>
+                                <div class="menu-iteM" data-value="OmegaHack Rewrite">OmegaHack Rewrite</div>
+                                <div class="menu-iteM" data-value="OmegaHack">OmegaHack</div>
+                                <div class="menu-iteM" data-value="OnePop">OnePop</div>
+                                <div class="menu-iteM" data-value="Onigiri">Onigiri</div>
+                                <div class="menu-iteM" data-value="Onix">Onix</div>
+                                <div class="menu-iteM" data-value="Onyx">Onyx</div>
+                                <div class="menu-iteM" data-value="Opal">Opal</div>
+                                <div class="menu-iteM" data-value="Opium">Opium</div>
+                                <div class="menu-iteM" data-value="Orangette">Orangette</div>
+                                <div class="menu-iteM" data-value="ORH">ORH</div>
+                                <div class="menu-iteM" data-value="Oringo">Oringo</div>
+                                <div class="menu-iteM" data-value="Orion">Orion</div>
+                                <div class="menu-iteM" data-value="Orphan">Orphan</div>
+                                <div class="menu-iteM" data-value="Osiris">Osiris</div>
+                                <div class="menu-iteM" data-value="Osiris+">Osiris+</div>
+                                <div class="menu-iteM" data-value="Outrage">Outrage</div>
+                                <div class="menu-iteM" data-value="Ovaq Reborn">Ovaq Reborn</div>
+                                <div class="menu-iteM" data-value="Ovaq Reborn+">Ovaq Reborn+</div>
+                                <div class="menu-iteM" data-value="Override">Override</div>
+                                <div class="menu-iteM" data-value="OwnedWare">OwnedWare</div>
+                                <div class="menu-iteM" data-value="Oxium">Oxium</div>
+                                <div class="menu-iteM" data-value="OyVey Rewrite">OyVey Rewrite</div>
+                                <div class="menu-iteM" data-value="Oyvey">Oyvey</div>
+                                <div class="menu-iteM" data-value="OyVey+">OyVey+</div>
+                                <div class="menu-iteM" data-value="Ozark">Ozark</div>
+                                <div class="menu-iteM" data-value="PandoraHack">PandoraHack</div>
+                                <div class="menu-iteM" data-value="Paragon">Paragon</div>
+                                <div class="menu-iteM" data-value="Past">Past</div>
+                                <div class="menu-iteM" data-value="PastiqueV2">PastiqueV2</div>
+                                <div class="menu-iteM" data-value="Penguin">Penguin</div>
+                                <div class="menu-iteM" data-value="PepsiMod">PepsiMod</div>
+                                <div class="menu-iteM" data-value="Perish V1">Perish V1</div>
+                                <div class="menu-iteM" data-value="Perish V2">Perish V2</div>
+                                <div class="menu-iteM" data-value="Perish V3">Perish V3</div>
+                                <div class="menu-iteM" data-value="Perish V4">Perish V4</div>
+                                <div class="menu-iteM" data-value="Perish V5">Perish V5</div>
+                                <div class="menu-iteM" data-value="Perish V6">Perish V6</div>
+                                <div class="menu-iteM" data-value="PerryPhobos">PerryPhobos</div>
+                                <div class="menu-iteM" data-value="PGz">PGz</div>
+                                <div class="menu-iteM" data-value="Phantom">Phantom</div>
+                                <div class="menu-iteM" data-value="Phasma">Phasma</div>
+                                <div class="menu-iteM" data-value="Phobos Lite">Phobos Lite</div>
+                                <div class="menu-iteM" data-value="Phobos Newbase">Phobos Newbase</div>
+                                <div class="menu-iteM" data-value="Phobos">Phobos</div>
+                                <div class="menu-iteM" data-value="PhoboxNotGay">PhoboxNotGay</div>
+                                <div class="menu-iteM" data-value="PigHack">PigHack</div>
+                                <div class="menu-iteM" data-value="PikaHack">PikaHack</div>
+                                <div class="menu-iteM" data-value="PistonClient">PistonClient</div>
+                                <div class="menu-iteM" data-value="Pizza">Pizza</div>
+                                <div class="menu-iteM" data-value="PocketClient">PocketClient</div>
+                                <div class="menu-iteM" data-value="Polaris">Polaris</div>
+                                <div class="menu-iteM" data-value="PollosHook">PollosHook</div>
+                                <div class="menu-iteM" data-value="PornoClient">PornoClient</div>
+                                <div class="menu-iteM" data-value="Postamn++">Postamn++</div>
+                                <div class="menu-iteM" data-value="Postman">Postman</div>
+                                <div class="menu-iteM" data-value="Prax">Prax</div>
+                                <div class="menu-iteM" data-value="Prestige">Prestige</div>
+                                <div class="menu-iteM" data-value="Pride+">Pride+s</div>
+                                <div class="menu-iteM" data-value="Primordial">Primordial</div>
+                                <div class="menu-iteM" data-value="Proactive">Proactive</div>
+                                <div class="menu-iteM" data-value="Progreso">Progreso</div>
+                                <div class="menu-iteM" data-value="ProtoHax">ProtoHax</div>
+                                <div class="menu-iteM" data-value="Proton">Proton</div>
+                                <div class="menu-iteM" data-value="ProtonPlus">ProtonPlus</div>
+                                <div class="menu-iteM" data-value="PubDLC">PubDLC</div>
+                                <div class="menu-iteM" data-value="Pulse">Pulse</div>
+                                <div class="menu-iteM" data-value="Pulsive">Pulsive</div>
+                                <div class="menu-iteM" data-value="PureHack">PureHack</div>
+                                <div class="menu-iteM" data-value="Pyro">Pyro</div>
+                                <div class="menu-iteM" data-value="Quantum Continued">Quantum Continued</div>
+                                <div class="menu-iteM" data-value="Quantum">Quantum</div>
+                                <div class="menu-iteM" data-value="Qubit">Qubit</div>
+                                <div class="menu-iteM" data-value="Qusar">Qusar</div>
+                                <div class="menu-iteM" data-value="QweruHax">QweruHax</div>
+                                <div class="menu-iteM" data-value="Radeon">Radeon</div>
+                                <div class="menu-iteM" data-value="Rage">Rage</div>
+                                <div class="menu-iteM" data-value="RailHack">RailHack</div>
+                                <div class="menu-iteM" data-value="Rainbow">Rainbow</div>
+                                <div class="menu-iteM" data-value="Raion">Raion</div>
+                                <div class="menu-iteM" data-value="RatWare">RatWare</div>
+                                <div class="menu-iteM" data-value="Raven B Plus">Faith</div>
+                                <div class="menu-iteM" data-value="Raven B+">Raven B+</div>
+                                <div class="menu-iteM" data-value="Raven B++">Raven B++</div>
+                                <div class="menu-iteM" data-value="Raven B+++">Raven B+++</div>
+                                <div class="menu-iteM" data-value="Raven BS Alpha">Raven BS Alpha</div>
+                                <div class="menu-iteM" data-value="Raven BS">Raven BS</div>
+                                <div class="menu-iteM" data-value="Raven N+">Raven N+</div>
+                                <div class="menu-iteM" data-value="Raven O++">Raven O++</div>
+                                <div class="menu-iteM" data-value="Raven XD">Raven XD</div>
+                                <div class="menu-iteM" data-value="Raven">Raven</div>
+                                <div class="menu-iteM" data-value="RavenB-">RavenB-</div>
+                                <div class="menu-iteM" data-value="RavenWeave">RavenWeave</div>
+                                <div class="menu-iteM" data-value="Razmorozka">Razmorozka</div>
+                                <div class="menu-iteM" data-value="Reach Premium">Reach Premium</div>
+                                <div class="menu-iteM" data-value="Reaper">Reaper</div>
+                                <div class="menu-iteM" data-value="Rebirth Alpha">Rebirth Alpha</div>
+                                <div class="menu-iteM" data-value="Rebirth Nextgen">Rebirth Nextgen</div>
+                                <div class="menu-iteM" data-value="Rebirth">Rebirth</div>
+                                <div class="menu-iteM" data-value="reDACTED">reDACTED</div>
+                                <div class="menu-iteM" data-value="Redline">Redline</div>
+                                <div class="menu-iteM" data-value="ReflectionClient">ReflectionClient</div>
+                                <div class="menu-iteM" data-value="Remnant">Remnant</div>
+                                <div class="menu-iteM" data-value="RenoSense">RenoSense</div>
+                                <div class="menu-iteM" data-value="RenoSenseTwo">RenoSenseTwo</div>
+                                <div class="menu-iteM" data-value="RerHack.club">RerHack.club</div>
+                                <div class="menu-iteM" data-value="Resilience">Resilience</div>
+                                <div class="menu-iteM" data-value="Revenge">Revenge</div>
+                                <div class="menu-iteM" data-value="Reverse">Reverse</div>
+                                <div class="menu-iteM" data-value="Reznya">Reznya</div>
+                                <div class="menu-iteM" data-value="Rich">Rich</div>
+                                <div class="menu-iteM" data-value="Rift">Rift</div>
+                                <div class="menu-iteM" data-value="Rise">Rise</div>
+                                <div class="menu-iteM" data-value="Rizz">Rizz</div>
+                                <div class="menu-iteM" data-value="Rocan">Rocan</div>
+                                <div class="menu-iteM" data-value="RockEZHack">RockEZHack</div>
+                                <div class="menu-iteM" data-value="RockStar">RockStar</div>
+                                <div class="menu-iteM" data-value="Rooster">Rooster</div>
+                                <div class="menu-iteM" data-value="RoseGold">RoseGold</div>
+                                <div class="menu-iteM" data-value="Ruby">Ruby</div>
+                                <div class="menu-iteM" data-value="Ruhama">Ruhama</div>
+                                <div class="menu-iteM" data-value="Ruhama+">Ruhama+</div>
+                                <div class="menu-iteM" data-value="Rune">Rune</div>
+                                <div class="menu-iteM" data-value="RusherHack">RusherHack</div>
+                                <div class="menu-iteM" data-value="RussianWare">RussianWare</div>
+                                <div class="menu-iteM" data-value="Rustme">Rustme</div>
+                                <div class="menu-iteM" data-value="Saba">Saba</div>
+                                <div class="menu-iteM" data-value="SafePoint+2">SafePoint+2</div>
+                                <div class="menu-iteM" data-value="SafePoint.club">SafePoint.club</div>
+                                <div class="menu-iteM" data-value="Salhack">Salhack</div>
+                                <div class="menu-iteM" data-value="SalHackSkid">SalHackSkid</div>
+                                <div class="menu-iteM" data-value="Salt">Salt</div>
+                                <div class="menu-iteM" data-value="Satellite">Satellite</div>
+                                <div class="menu-iteM" data-value="Saturn">Saturn</div>
+                                <div class="menu-iteM" data-value="Scald">Scald</div>
+                                <div class="menu-iteM" data-value="Schizoid">Schizoid</div>
+                                <div class="menu-iteM" data-value="Scrim">Scrim</div>
+                                <div class="menu-iteM" data-value="Seline">Seline</div>
+                                <div class="menu-iteM" data-value="Seppuku">Seppuku</div>
+                                <div class="menu-iteM" data-value="Serenity">Serenity</div>
+                                <div class="menu-iteM" data-value="SerenityCE">SerenityCE</div>
+                                <div class="menu-iteM" data-value="SeturHack">SeturHack</div>
+                                <div class="menu-iteM" data-value="SevCheat">SevCheat</div>
+                                <div class="menu-iteM" data-value="SexHack">SexHack</div>
+                                <div class="menu-iteM" data-value="SexMaster.cc">SexMaster.cc</div>
+                                <div class="menu-iteM" data-value="Shadow">Shadow</div>
+                                <div class="menu-iteM" data-value="ShafferHack">ShafferHack</div>
+                                <div class="menu-iteM" data-value="ShellSock">ShellSock</div>
+                                <div class="menu-iteM" data-value="SHGR">SHGR</div>
+                                <div class="menu-iteM" data-value="Shid">Shid</div>
+                                <div class="menu-iteM" data-value="Shimeji">Shimeji</div>
+                                <div class="menu-iteM" data-value="Shoreline NEW">Shoreline NEW</div>
+                                <div class="menu-iteM" data-value="Shoreline">Shoreline</div>
+                                <div class="menu-iteM" data-value="Shrimp">Shrimp</div>
+                                <div class="menu-iteM" data-value="ShrimpHack">ShrimpHack</div>
+                                <div class="menu-iteM" data-value="SigamWare.CC">SigamWare.CC</div>
+                                <div class="menu-iteM" data-value="Sigma Jello">Sigma Jello</div>
+                                <div class="menu-iteM" data-value="Sigma">Sigma</div>
+                                <div class="menu-iteM" data-value="Sikiskenkurt.CC">Sikiskenkurt.CC</div>
+                                <div class="menu-iteM" data-value="Silence">Silence</div>
+                                <div class="menu-iteM" data-value="Silk">Silk</div>
+                                <div class="menu-iteM" data-value="Sirius">Sirius</div>
+                                <div class="menu-iteM" data-value="Six Seven">Six Seven</div>
+                                <div class="menu-iteM" data-value="Skid+">Skid+</div>
+                                <div class="menu-iteM" data-value="SkidBounce">SkidBounce</div>
+                                <div class="menu-iteM" data-value="Skidcraft">Skidcraft</div>
+                                <div class="menu-iteM" data-value="Skidd.ed">Skidd.ed</div>
+                                <div class="menu-iteM" data-value="SkidwareMC">SkidwareMC</div>
+                                <div class="menu-iteM" data-value="Skill">Skill</div>
+                                <div class="menu-iteM" data-value="SkilledClient">SkilledClient</div>
+                                <div class="menu-iteM" data-value="Skuxx">Skuxx</div>
+                                <div class="menu-iteM" data-value="Slack">Slack</div>
+                                <div class="menu-iteM" data-value="Sleek">Sleek</div>
+                                <div class="menu-iteM" data-value="Slinky.gg">Slinky.gg</div>
+                                <div class="menu-iteM" data-value="Sloth">Sloth</div>
+                                <div class="menu-iteM" data-value="Slu.gg">Slu.gg</div>
+                                <div class="menu-iteM" data-value="SlugClient">SlugClient</div>
+                                <div class="menu-iteM" data-value="SmartClient">SmartClient</div>
+                                <div class="menu-iteM" data-value="SMKING">SMKING</div>
+                                <div class="menu-iteM" data-value="Smok">Smok</div>
+                                <div class="menu-iteM" data-value="SMPHack">SMPHack</div>
+                                <div class="menu-iteM" data-value="Sn0w">Sn0w</div>
+                                <div class="menu-iteM" data-value="Snow">Snow</div>
+                                <div class="menu-iteM" data-value="SnowFallWare">SnowFallWare</div>
+                                <div class="menu-iteM" data-value="SodaWare">SodaWare</div>
+                                <div class="menu-iteM" data-value="SolClient">SolClient</div>
+                                <div class="menu-iteM" data-value="Solocite modern">Solocite modern</div>
+                                <div class="menu-iteM" data-value="Solocite new">Solocite new</div>
+                                <div class="menu-iteM" data-value="Solocite old">Solocite old</div>
+                                <div class="menu-iteM" data-value="Sorus">Sorus</div>
+                                <div class="menu-iteM" data-value="SovietWare">SovietWare</div>
+                                <div class="menu-iteM" data-value="Spark">Spark</div>
+                                <div class="menu-iteM" data-value="SpectClient">SpectClient</div>
+                                <div class="menu-iteM" data-value="Spicy">Spicy</div>
+                                <div class="menu-iteM" data-value="SpiderSense">SpiderSense</div>
+                                <div class="menu-iteM" data-value="SplashClient">SplashClient</div>
+                                <div class="menu-iteM" data-value="Spoon">Spoon</div>
+                                <div class="menu-iteM" data-value="Stay">Stay</div>
+                                <div class="menu-iteM" data-value="StayPro">StayPro</div>
+                                <div class="menu-iteM" data-value="Stifle">Stifle</div>
+                                <div class="menu-iteM" data-value="Storm">Storm</div>
+                                <div class="menu-iteM" data-value="Strafehack">Strafehack</div>
+                                <div class="menu-iteM" data-value="StrataWare">StrataWare</div>
+                                <div class="menu-iteM" data-value="Styles">Styles</div>
+                                <div class="menu-iteM" data-value="Sudo">Sudo</div>
+                                <div class="menu-iteM" data-value="Sugoma">Sugoma</div>
+                                <div class="menu-iteM" data-value="Sukumi">Sukumi</div>
+                                <div class="menu-iteM" data-value="Summit">Summit</div>
+                                <div class="menu-iteM" data-value="Summit+">Summit+</div>
+                                <div class="menu-iteM" data-value="SumoClient">SumoClient</div>
+                                <div class="menu-iteM" data-value="Sunrise">Sunrise</div>
+                                <div class="menu-iteM" data-value="Sunshine">Sunshine</div>
+                                <div class="menu-iteM" data-value="Supermacy">Supermacy</div>
+                                <div class="menu-iteM" data-value="Sushi">Sushi</div>
+                                <div class="menu-iteM" data-value="Sushi.cc v2">Sushi.cc v2</div>
+                                <div class="menu-iteM" data-value="Sweet">Sweet</div>
+                                <div class="menu-iteM" data-value="Swift">Swift</div>
+                                <div class="menu-iteM" data-value="Sydney">Sydney</div>
+                                <div class="menu-iteM" data-value="Syracuse">Syracuse</div>
+                                <div class="menu-iteM" data-value="System">System</div>
+                                <div class="menu-iteM" data-value="System">System</div>
+                                <div class="menu-iteM" data-value="Tarasande">Tarasande</div>
+                                <div class="menu-iteM" data-value="Target">Target</div>
+                                <div class="menu-iteM" data-value="TaterGod.cc">TaterGod.cc</div>
+                                <div class="menu-iteM" data-value="TeddyWare">TeddyWare</div>
+                                <div class="menu-iteM" data-value="Temple">Temple</div>
+                                <div class="menu-iteM" data-value="Tenacity">Tenacity</div>
+                                <div class="menu-iteM" data-value="Tensor">Tensor</div>
+                                <div class="menu-iteM" data-value="Tesla">Tesla</div>
+                                <div class="menu-iteM" data-value="Theresa">Theresa</div>
+                                <div class="menu-iteM" data-value="Thesame.space">Thesame.space</div>
+                                <div class="menu-iteM" data-value="ThighWare">ThighWare</div>
+                                <div class="menu-iteM" data-value="ThreeZeroThreeHack">ThreeZeroThreeHack</div>
+                                <div class="menu-iteM" data-value="THSense">THSense</div>
+                                <div class="menu-iteM" data-value="ThunderHack Deluxe">ThunderHack Deluxe</div>
+                                <div class="menu-iteM" data-value="ThunderHack Recode">ThunderHack Recode</div>
+                                <div class="menu-iteM" data-value="Thunderhack">Thunderhack</div>
+                                <div class="menu-iteM" data-value="ThunderHack+">ThunderHack+</div>
+                                <div class="menu-iteM" data-value="Thymus">Thymus</div>
+                                <div class="menu-iteM" data-value="Toast">Toast</div>
+                                <div class="menu-iteM" data-value="Tokyo">Tokyo</div>
+                                <div class="menu-iteM" data-value="Tomato">Tomato</div>
+                                <div class="menu-iteM" data-value="TooFaded">TooFaded</div>
+                                <div class="menu-iteM" data-value="Toolbox">Toolbox</div>
+                                <div class="menu-iteM" data-value="Tork Red">Tork Red</div>
+                                <div class="menu-iteM" data-value="Toxic.club">Toxic.club</div>
+                                <div class="menu-iteM" data-value="TransWare">TransWare</div>
+                                <div class="menu-iteM" data-value="TrapClient">TrapClient</div>
+                                <div class="menu-iteM" data-value="Triangle">Triangle</div>
+                                <div class="menu-iteM" data-value="Trinity">Trinity</div>
+                                <div class="menu-iteM" data-value="Trinity+">Trinity+</div>
+                                <div class="menu-iteM" data-value="TrollGod.cc">TrollGod.cc</div>
+                                <div class="menu-iteM" data-value="Trollhack">Trollhack</div>
+                                <div class="menu-iteM" data-value="Troxill">Troxill</div>
+                                <div class="menu-iteM" data-value="Tudou">Tudou</div>
+                                <div class="menu-iteM" data-value="TurcoHack.cc">TurcoHack.cc</div>
+                                <div class="menu-iteM" data-value="Turok">Turok</div>
+                                <div class="menu-iteM" data-value="TuxHack">TuxHack</div>
+                                <div class="menu-iteM" data-value="Undisputed">Undisputed</div>
+                                <div class="menu-iteM" data-value="Uop.cc">Uop.cc</div>
+                                <div class="menu-iteM" data-value="Uranium">Uranium</div>
+                                <div class="menu-iteM" data-value="Urmomia">Urmomia</div>
+                                <div class="menu-iteM" data-value="UwUGod">UwUGod</div>
+                                <div class="menu-iteM" data-value="UZI Client">UZI Client</div>
+                                <div class="menu-iteM" data-value="UZI">UZI</div>
+                                <div class="menu-iteM" data-value="V0id">V0id</div>
+                                <div class="menu-iteM" data-value="Valkyire">Valkyire</div>
+                                <div class="menu-iteM" data-value="Vanadium">Vanadium</div>
+                                <div class="menu-iteM" data-value="Vanta">Vanta</div>
+                                <div class="menu-iteM" data-value="Vape V4">Vape V4</div>
+                                <div class="menu-iteM" data-value="Vape">Vape</div>
+                                <div class="menu-iteM" data-value="Vapid">Vapid</div>
+                                <div class="menu-iteM" data-value="Vector">Vector</div>
+                                <div class="menu-iteM" data-value="Vector">Vector</div>
+                                <div class="menu-iteM" data-value="VectorClient">VectorClient</div>
+                                <div class="menu-iteM" data-value="Vegaline">Vegaline</div>
+                                <div class="menu-iteM" data-value="Velocity">Velocity</div>
+                                <div class="menu-iteM" data-value="Velvet">Velvet</div>
+                                <div class="menu-iteM" data-value="VenHack">VenHack</div>
+                                <div class="menu-iteM" data-value="VenomHack">VenomHack</div>
+                                <div class="menu-iteM" data-value="Vertex">Vertex</div>
+                                <div class="menu-iteM" data-value="Vertine">Vertine</div>
+                                <div class="menu-iteM" data-value="VeteranHack">VeteranHack</div>
+                                <div class="menu-iteM" data-value="VetHack">VetHack</div>
+                                <div class="menu-iteM" data-value="Viagra">Viagra</div>
+                                <div class="menu-iteM" data-value="Violet">Violet</div>
+                                <div class="menu-iteM" data-value="Virgin">Virgin</div>
+                                <div class="menu-iteM" data-value="Void">Void</div>
+                                <div class="menu-iteM" data-value="Voidline">Voidline</div>
+                                <div class="menu-iteM" data-value="Volt">Volt</div>
+                                <div class="menu-iteM" data-value="Vonware">Vonware</div>
+                                <div class="menu-iteM" data-value="Vortex Plus">Vortex Plus</div>
+                                <div class="menu-iteM" data-value="Vortex Pulse">Vortex Pulse</div>
+                                <div class="menu-iteM" data-value="Vox">Vox</div>
+                                <div class="menu-iteM" data-value="Vrpos">Vrpos</div>
+                                <div class="menu-iteM" data-value="VydraHack">VydraHack</div>
+                                <div class="menu-iteM" data-value="VyperHax">VyperHax</div>
+                                <div class="menu-iteM" data-value="W1seHack">W1seHack</div>
+                                <div class="menu-iteM" data-value="WaizyHack">WaizyHack</div>
+                                <div class="menu-iteM" data-value="Walksy">Walksy</div>
+                                <div class="menu-iteM" data-value="Walksy">Walksy</div>
+                                <div class="menu-iteM" data-value="Walmare">Walmare</div>
+                                <div class="menu-iteM" data-value="Warden">Warden</div>
+                                <div class="menu-iteM" data-value="WClient">WClient</div>
+                                <div class="menu-iteM" data-value="WDNC">WDNC</div>
+                                <div class="menu-iteM" data-value="WebHack">WebHack</div>
+                                <div class="menu-iteM" data-value="Weedhack">Weedhack</div>
+                                <div class="menu-iteM" data-value="WeepCraft">WeepCraft</div>
+                                <div class="menu-iteM" data-value="WetHack">WetHack</div>
+                                <div class="menu-iteM" data-value="WexSide">WexSide</div>
+                                <div class="menu-iteM" data-value="WhiskerZ">WhiskerZ</div>
+                                <div class="menu-iteM" data-value="WIHK">WIHK</div>
+                                <div class="menu-iteM" data-value="Wild">Wild</div>
+                                <div class="menu-iteM" data-value="Windy">Windy</div>
+                                <div class="menu-iteM" data-value="Wing Client">Wing Client</div>
+                                <div class="menu-iteM" data-value="Winter">Winter</div>
+                                <div class="menu-iteM" data-value="WintWare">WintWare</div>
+                                <div class="menu-iteM" data-value="WizClient">WizClient</div>
+                                <div class="menu-iteM" data-value="Wonderwhale.ng">Wonderwhale.ng</div>
+                                <div class="menu-iteM" data-value="WOO">WOO</div>
+                                <div class="menu-iteM" data-value="WubzMod">WubzMod</div>
+                                <div class="menu-iteM" data-value="Wurst">Wurst</div>
+                                <div class="menu-iteM" data-value="Wurst+1">Wurst+1</div>
+                                <div class="menu-iteM" data-value="Wurst+2">Wurst+2</div>
+                                <div class="menu-iteM" data-value="Wurst+3">Wurst+3</div>
+                                <div class="menu-iteM" data-value="Wurst+4">Wurst+4</div>
+                                <div class="menu-iteM" data-value="Wurst-">Wurst-</div>
+                                <div class="menu-iteM" data-value="Wurstplusv3">Wurstplusv3</div>
+                                <div class="menu-iteM" data-value="Xanax">Xanax</div>
+                                <div class="menu-iteM" data-value="Xannax">Xannax</div>
+                                <div class="menu-iteM" data-value="Xatzotica">Xatzotica</div>
+                                <div class="menu-iteM" data-value="Xdolf">Xdolf</div>
+                                <div class="menu-iteM" data-value="Xenith">Xenith</div>
+                                <div class="menu-iteM" data-value="Xeno">Xeno</div>
+                                <div class="menu-iteM" data-value="Xenophyre">Xenophyre</div>
+                                <div class="menu-iteM" data-value="Xeon">Xeon</div>
+                                <div class="menu-iteM" data-value="Xerox">Xerox</div>
+                                <div class="menu-iteM" data-value="XG42">XG42</div>
+                                <div class="menu-iteM" data-value="Xl Client">Xl Client</div>
+                                <div class="menu-iteM" data-value="XSWare">XSWare</div>
+                                <div class="menu-iteM" data-value="Xulu">Xulu</div>
+                                <div class="menu-iteM" data-value="Xulu+">Xulu+</div>
+                                <div class="menu-iteM" data-value="Xyla">Xyla</div>
+                                <div class="menu-iteM" data-value="Xylo">Xylo</div>
+                                <div class="menu-iteM" data-value="Yasashii">Yasashii</div>
+                                <div class="menu-iteM" data-value="Yee">Yee</div>
+                                <div class="menu-iteM" data-value="YoinkHack">YoinkHack</div>
+                                <div class="menu-iteM" data-value="YuKi">YuKi</div>
+                                <div class="menu-iteM" data-value="Zamorozka">Zamorozka</div>
+                                <div class="menu-iteM" data-value="Zelix">Zelix</div>
+                                <div class="menu-iteM" data-value="ZenGit">ZenGit</div>
+                                <div class="menu-iteM" data-value="Zenith External">Zenith External</div>
+                                <div class="menu-iteM" data-value="Zenith">Zenith</div>
+                                <div class="menu-iteM" data-value="Zeolis5">Zeolis5</div>
+                                <div class="menu-iteM" data-value="Zeon">Zeon</div>
+                                <div class="menu-iteM" data-value="Zephyr">Zephyr</div>
+                                <div class="menu-iteM" data-value="ZeroDay">ZeroDay</div>
+                                <div class="menu-iteM" data-value="ZeroHack">ZeroHack</div>
+                                <div class="menu-iteM" data-value="ZeroTwo">ZeroTwo</div>
+                                <div class="menu-iteM" data-value="Zeus">Zeus</div>
+                                <div class="menu-iteM" data-value="Zinc">Zinc</div>
+                                <div class="menu-iteM" data-value="Zirconium">Zirconium</div>
+                                <div class="menu-iteM" data-value="Zispanos">Zispanos</div>
+                                <div class="menu-iteM" data-value="Zodiac">Zodiac</div>
+                                <div class="menu-iteM" data-value="Zori">Zori</div>
+                                <div class="menu-iteM" data-value="Zork">Zork</div>
+                                <div class="menu-iteM" data-value="ZSpaceHack">ZSpaceHack</div>
+                                <div class="menu-iteM" data-value="ZWare.CC">ZWare.CC</div>
+
+
+                                
+                            </div></div><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Type of UI skin</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Hold key</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>You will have to hold the key you set and if you let go the module deactivates</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">Show on array list</div><div class="dropdown-label" style="color: #00000000;">.</div><label><input type="checkbox" class="input"><span class="custom-checkbox"></span></label><div class="dot" style="position: absolute; margin-top: 0px; margin-left: 90%;" id="hoverDot2"></div><div class="info-box" id="infoBox2"><p>Changes the visibility of the module in the Array List</p></div></div>
+                        <div class="dropdown-row"><div class="dropdown-label">KEYBIND</div><div class="dropdown-label" style="color: transparent;">.</div><div class="dropdown-container">
+                            <div class="dropdown-btn"><span class="selected-text">NONE</span><span class="arrow">▼</span></div><div class="dropdown-menu">
+                            <div class="menu-item" data-value="1">1</div> <div class="menu-item" data-value="2">2</div> <div class="menu-item" data-value="3">3</div> <div class="menu-item" data-value="4">4</div> <div class="menu-item" data-value="5">5</div> <div class="menu-item" data-value="6">6</div> <div class="menu-item" data-value="7">7</div> <div class="menu-item" data-value="8">8</div> <div class="menu-item" data-value="9">9</div> <div class="menu-item" data-value="0">0</div> <div class="menu-item" data-value="A">A</div> <div class="menu-item" data-value="B">B</div> <div class="menu-item" data-value="C">C</div> <div class="menu-item" data-value="D">D</div> <div class="menu-item" data-value="E">E</div> <div class="menu-item" data-value="F">F</div> <div class="menu-item" data-value="G">G</div> <div class="menu-item" data-value="H">H</div> <div class="menu-item" data-value="I">I</div> <div class="menu-item" data-value="J">J</div> <div class="menu-item" data-value="K">K</div> <div class="menu-item" data-value="L">L</div> <div class="menu-item" data-value="M">M</div> <div class="menu-item" data-value="N">N</div> <div class="menu-item" data-value="O">O</div> <div class="menu-item" data-value="P">P</div> <div class="menu-item" data-value="Q">Q</div> <div class="menu-item" data-value="R">R</div> <div class="menu-item" data-value="S">S</div> <div class="menu-item" data-value="T">T</div> <div class="menu-item" data-value="U">U</div> <div class="menu-item" data-value="V">V</div> <div class="menu-item" data-value="W">W</div> <div class="menu-item" data-value="X">X</div> <div class="menu-item" data-value="Y">Y</div> <div class="menu-item" data-value="Z">Z</div> <div class="menu-item" data-value="!">!</div> <div class="menu-item" data-value="@">@</div> <div class="menu-item" data-value="#">#</div> <div class="menu-item" data-value="$">$</div> <div class="menu-item" data-value="%">%</div> <div class="menu-item" data-value="^">^</div> <div class="menu-item" data-value="&">&</div> <div class="menu-item" data-value="*">*</div> <div class="menu-item" data-value="(">(</div> <div class="menu-item" data-value=")">)</div> <div class="menu-item" data-value="[">[</div> <div class="menu-item" data-value="]">]</div> <div class="menu-item" data-value="{">{</div> <div class="menu-item" data-value="}">}</div> <div class="menu-item" data-value=":">:</div> <div class="menu-item" data-value=";">;</div> <div class="menu-item" data-value="'">'</div> <div class="menu-item" data-value=",">,</div> <div class="menu-item" data-value=".">.</div> <div class="menu-item" data-value="/">/</div> <div class="menu-item" data-value="\">\</div> <div class="menu-item" data-value="-">-</div> <div class="menu-item" data-value="+">+</div> <div class="menu-item" data-value="F1">F1</div> <div class="menu-item" data-value="F2">F2</div> <div class="menu-item" data-value="F3">F3</div> <div class="menu-item" data-value="F4">F4</div> <div class="menu-item" data-value="F5">F5</div> <div class="menu-item" data-value="F6">F6</div> <div class="menu-item" data-value="F7">F7</div> <div class="menu-item" data-value="F8">F8</div> <div class="menu-item" data-value="F9">F9</div> <div class="menu-item" data-value="F10">F10</div> <div class="menu-item" data-value="F11">F11</div> <div class="menu-item" data-value="F12">F12</div> <div class="menu-item" data-value="LCTRL">LCTRL</div> <div class="menu-item" data-value="RCTRL">RCTRL</div> <div class="menu-item" data-value="LALT">LALT</div> <div class="menu-item" data-value="LSHIFT">LSHIFT</div> <div class="menu-item" data-value="RSHIFT">RSHIFT</div> <div class="menu-item" data-value="LCLICK">LCLICK</div> <div class="menu-item" data-value="RCLICK">RCLICK</div> <div class="menu-item" data-value="MCLICK">MCLICK</div> <div class="menu-item" data-value="ENTER">ENTER</div> <div class="menu-item" data-value="TAB">TAB</div> <div class="menu-item" data-value="HOME">HOME</div> <div class="menu-item" data-value="END">END</div> <div class="menu-item" data-value="PUP">PUP</div> <div class="menu-item" data-value="PDOWN">PDOWN</div> <div class="menu-item" data-value="INS">INS</div> <div class="menu-item" data-value="DEL">DEL</div> <div class="menu-item" data-value="BACKSPACE">BACKSPACE</div> <div class="menu-item" data-value="PRTSCR">PRTSCR</div> <div class="menu-item" data-value="SCROLL LOCK">SCROLL LOCK</div> <div class="menu-item" data-value="PAUSE BREAK">PAUSE BREAK</div> <div class="menu-item" data-value="WINR">WINR</div> <div class="menu-item" data-value="WINL">WINL</div>
+                        </div></div></div></div></div>    
+                    
+                    </div>
 
 <div class="tab-panel overflow-hidden" style="border-radius: 1px; line-height: 20px;">
                 <div style="font-size: 15px; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; padding-right: 0px;" class="tab-header p-6 text-center">
@@ -4476,4 +5618,3 @@ body::-webkit-scrollbar {
     </script>
 </body>
 </html>
-
