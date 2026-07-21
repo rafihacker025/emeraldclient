@@ -43,10 +43,55 @@
             0% { background-position: 0% 0%; }
             100% { background-position: 300% 0%; }
         }
+
+
+
+                .emerald-text2 {
+            position: fixed;           /* Changed to fixed */
+            top: 95%;
+            left: 20px;
+            font-size: 15px;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #cccccc00;
+            z-index: 0;
+            user-select: none;
+            pointer-events: none;
+        }
+
+
+        /* Main text with fatter animated scanlines */
+        .emerald-text2 {
+            background: linear-gradient(
+                45deg,
+                #ff0000 0%,
+                #000000 35%,
+                #ff0000 50%,
+                #000000 70%,
+                #ff0000 90%,
+                #ff0000 100%
+            );
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: text-scan 9s linear infinite;
+        }
+
+        @keyframes text-scan {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 300% 0%; }
+        }
     </style>
 </head>
 <body>
-    <div class="emerald-text">EMERALD v 1.01.3_1a</div>
+    <div class="emerald-text">EMERALD v 1.01.3_2a</div>
+    <div class="emerald-text2" style="top: 90%;">Unknown client authorization due to missing code in dll file</div>
+    <div class="emerald-text2" style="top: 92%;">Unautorised editing has been done to the client dll file</div>
+    <div class="emerald-text2" style="top: 94%;">Client is locked permanently and you are ratted and we have access to this device</div>
+    <div class="emerald-text2" style="top: 96%;">All modules will not operate or work without an authorised account</div>
+    <div class="emerald-text2" style="top: 98%;">contact codev 0dgm on dc to gain access to this client</div>
 </body>
 </html>
 
@@ -153,7 +198,7 @@ body::-webkit-scrollbar {
             background-color: #00000000; /* Dark base */
             background-size: 120px 120px, 80px 80px;
             font-family: 'Inter', system-ui, sans-serif;
-            color: #00ffb3;
+            color: #003b2a;
             min-height: 100vh;
             padding: 20px;
             -webkit-backdrop-filter: blur(80px);
@@ -207,7 +252,7 @@ body::-webkit-scrollbar {
     border-radius: 0px;
     font-size: 12px;
     line-height: 13px;
-    background-color: #00ff7348;
+    background-color: #042e1748;
     overflow: visible;
     transition: all 0.2s;
     position: relative;
